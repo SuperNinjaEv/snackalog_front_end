@@ -1,10 +1,17 @@
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
-import Home from './Pages/Home'
-import Navbar from './components/Navbar'
-import Snacks from './components/Snacks'
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import Navbar from './Components/Navbar';
+
+import Edit from "./Pages/Edit";
+import FourOFour from "./Pages/FourOFour";
+import Home from "./Pages/Home";
+import Index from "./Pages/Index";
+import New from "./Pages/New";
+import Show from "./Pages/Show";
+
 //import useState here since it will affect the list or grid view IN THE HOMEPAGE
-const API = process.env.REACT_APP_API_URL
+const API = process.env.REACT_APP_API_URL;
 
 function App() {
   return (
@@ -13,11 +20,15 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/snacks' element={<Snacks />} />
+          <Route path="/snacks" element={<Index />} />
+          <Route path="/snacks/new" element={<New />} />
+          <Route path="/snacks/:id" element={<Show />} />
+          <Route path="/snacks/:id/edit" element={<Edit />} />
+          <Route path="/*" element={<FourOFour />} />
         </Routes>
       </main>
     </div>
   )
 }
 
-export default App
+export default App;
