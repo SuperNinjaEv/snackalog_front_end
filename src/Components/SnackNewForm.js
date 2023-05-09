@@ -4,22 +4,22 @@ import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-function BookmarkNewForm() {
+function SnackNewForm() {
   let navigate = useNavigate();
 
-  const addBookmark = (newBookmark) => {
+  const addSnack = (newSnack) => {
     axios
-      .post(`${API}/bookmarks`, newBookmark)
+      .post(`${API}/snacks`, newSnack)
       .then(
         () => {
-          navigate(`/bookmarks`);
+          navigate(`/snacks`);
         },
         (error) => console.error(error)
       )
       .catch((c) => console.warn("catch", c));
   };
 
-  const [bookmark, setBookmark] = useState({
+  const [snack, setSnack] = useState({
     name: "",
     url: "",
     category: "",
@@ -27,16 +27,16 @@ function BookmarkNewForm() {
   });
 
   const handleTextChange = (event) => {
-    setBookmark({ ...bookmark, [event.target.id]: event.target.value });
+    setSnack({ ...snack, [event.target.id]: event.target.value });
   };
 
   const handleCheckboxChange = () => {
-    setBookmark({ ...bookmark, is_favorite: !bookmark.is_favorite });
+    setSnack({ ...snack, is_favorite: !Snack.is_favorite });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addBookmark(bookmark);
+    addSnack(Snack);
   };
   return (
     <div className="New">
@@ -44,7 +44,7 @@ function BookmarkNewForm() {
         <label htmlFor="name">Name:</label>
         <input
           id="name"
-          value={bookmark.name}
+          value={Snack.name}
           type="text"
           onChange={handleTextChange}
           placeholder="Name of Website"
@@ -56,7 +56,7 @@ function BookmarkNewForm() {
           type="text"
           pattern="http[s]*://.+"
           required
-          value={bookmark.url}
+          value={Snack.url}
           placeholder="http://"
           onChange={handleTextChange}
         />
@@ -65,7 +65,7 @@ function BookmarkNewForm() {
           id="category"
           type="text"
           name="category"
-          value={bookmark.category}
+          value={Snack.category}
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
@@ -74,7 +74,7 @@ function BookmarkNewForm() {
           id="is_favorite"
           type="checkbox"
           onChange={handleCheckboxChange}
-          checked={bookmark.is_favorite}
+          checked={Snack.is_favorite}
         />
 
         <br />
@@ -84,4 +84,4 @@ function BookmarkNewForm() {
   );
 }
 
-export default BookmarkNewForm;
+export default SnackNewForm;
