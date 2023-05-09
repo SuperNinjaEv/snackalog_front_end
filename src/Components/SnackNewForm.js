@@ -31,12 +31,12 @@ function SnackNewForm() {
   };
 
   const handleCheckboxChange = () => {
-    setSnack({ ...snack, is_favorite: !Snack.is_favorite });
+    setSnack({ ...snack, is_favorite: !snack.is_favorite });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addSnack(Snack);
+    addSnack(snack);
   };
   return (
     <div className="New">
@@ -44,11 +44,18 @@ function SnackNewForm() {
         <label htmlFor="name">Name:</label>
         <input
           id="name"
-          value={Snack.name}
+          value={snack.name}
           type="text"
           onChange={handleTextChange}
-          placeholder="Name of Website"
+          placeholder="Name of Snack"
           required
+        />
+        <label htmlFor="category">Category:</label>
+        <input
+          id="category"
+          value={snack.category}
+          type="dropdown"
+          onChange={handleTextChange}
         />
         <label htmlFor="url">URL:</label>
         <input
@@ -56,7 +63,7 @@ function SnackNewForm() {
           type="text"
           pattern="http[s]*://.+"
           required
-          value={Snack.url}
+          value={snack.url}
           placeholder="http://"
           onChange={handleTextChange}
         />
@@ -65,7 +72,7 @@ function SnackNewForm() {
           id="category"
           type="text"
           name="category"
-          value={Snack.category}
+          value={snack.category}
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
@@ -74,7 +81,7 @@ function SnackNewForm() {
           id="is_favorite"
           type="checkbox"
           onChange={handleCheckboxChange}
-          checked={Snack.is_favorite}
+          checked={snack.is_favorite}
         />
 
         <br />
