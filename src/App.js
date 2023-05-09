@@ -4,6 +4,7 @@ import Home from './Pages/Home'
 import Navbar from './components/Navbar'
 import Snacks from './components/Snacks'
 //import useState here since it will affect the list or grid view IN THE HOMEPAGE
+const API = process.env.REACT_APP_API_URL
 
 function App() {
   return (
