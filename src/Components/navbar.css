@@ -1,0 +1,32 @@
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    background-color: #fff6a2;
+    border-bottom:red solid 3px;
+    height:150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+nav aside{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+header img{
+width:200px;
+height:200px;
+transform: translateY(-25px);
+}
+.add-btn{
+    grid-column-start: 4;
+    background-color:red;
+    border:none;
+    border-radius:5px;
+    padding:5px;
+    color:white;
+    font-weight:bold;
+    height:40px;
+}
