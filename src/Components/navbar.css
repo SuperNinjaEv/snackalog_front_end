@@ -16,9 +16,9 @@ nav aside{
     justify-content: center;
 }
 header img{
-width:200px;
-height:200px;
-transform: translateY(-25px);
+width:180px;
+height:180px;
+transform: translateY(-15px);
 }
 .add-btn{
     grid-column-start: 4;

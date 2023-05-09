@@ -1,5 +1,5 @@
 import './navbar.css'
-import logo from '../assets/snackalog-logo-v2.svg'
+import logo from '../assets/snackalog-icon-v1.svg'
 export default function Navbar() {
   return (
     <nav>
