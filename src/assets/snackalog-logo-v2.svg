@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg width="219mm" height="117mm" version="1.1" viewBox="0 0 219 117" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="234mm" height="117mm" version="1.1" viewBox="0 0 234 117" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="linearGradient32710" x1="54.614" x2="128.78" y1="136.02" y2="136.02" gradientTransform="matrix(.96866 0 0 .96866 41.267 -59.516)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="linearGradient36434" x1="54.614" x2="128.78" y1="136.02" y2="136.02" gradientTransform="matrix(.96866 0 0 .96866 52.804 -53.058)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fff6a2" offset="0"/>
   </linearGradient>
  </defs>
@@ -14,8 +14,8 @@
    <path d="m18.687 198.89h29.366z"/>
   </g>
   <circle cx="53.577" cy="63.116" r="52.917" fill="#f00" stroke-width=".26458"/>
-  <path transform="matrix(2.1383 .11672 -.15229 2.2713 113.83 -360.15)" d="m20.222 182.16-31.355 7.5682 9.1233-30.938z" fill="#fff6a2" stroke="#000" stroke-width=".12003"/>
+  <path transform="matrix(2.1383 .11672 -.15229 2.2713 113.83 -356.79)" d="m20.222 182.16-31.355 7.5682 9.1233-30.938z" fill="#fff6a2" stroke="#000" stroke-width=".12003"/>
   <circle cx="53.577" cy="63.116" r="50.271" fill="#fff6a2" stroke="#000" stroke-width=".26458"/>
-  <text transform="scale(1.318 .75875)" x="165.1066" y="51.108192" fill="#ff0000" font-family="'American Typewriter'" font-size="21.708px" font-weight="bold" letter-spacing="0px" stroke="url(#linearGradient32710)" stroke-opacity=".59586" stroke-width="0" text-align="end" text-anchor="end" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal" xml:space="preserve"><tspan x="165.1066" y="51.108192" fill="#ff0000" font-family="'American Typewriter'" font-size="21.708px" font-weight="bold" stroke="url(#linearGradient32710)" stroke-opacity=".59586" stroke-width="0" text-align="end" text-anchor="end" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan dy="0 0 0 0 0" rotate="0 0 0 0 0 0" fill="#ff0000" font-family="'American Typewriter'" font-size="21.708px" font-weight="bold" stroke="url(#linearGradient32710)" stroke-opacity=".59586" stroke-width="0" text-align="end" text-anchor="end" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Snack</tspan>-A-Log</tspan></text>
+  <text transform="scale(1.318 .75875)" x="176.64392" y="57.565453" fill="#ff0000" font-family="'American Typewriter'" font-size="21.708px" font-weight="bold" letter-spacing="0px" stroke="url(#linearGradient36434)" stroke-opacity=".59586" stroke-width="0" text-align="end" text-anchor="end" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal" xml:space="preserve"><tspan x="176.64392" y="57.565453" fill="#ff0000" font-family="'American Typewriter'" font-size="21.708px" font-weight="bold" stroke="url(#linearGradient36434)" stroke-opacity=".59586" stroke-width="0" text-align="end" text-anchor="end" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan dy="0" rotate="0 0 0 0 0 0" fill="#ff0000" font-family="'American Typewriter'" font-size="21.708px" font-weight="bold" stroke="url(#linearGradient36434)" stroke-opacity=".59586" stroke-width="0" text-align="end" text-anchor="end" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">SNACK</tspan>-A-LOG</tspan></text>
  </g>
 </svg>
