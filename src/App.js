@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Snacks from './components/Snacks';
 //import useState here since it will affect the list or grid view IN THE HOMEPAGE 
 
