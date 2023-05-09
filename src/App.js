@@ -1,14 +1,12 @@
-// import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Snacks from './components/Snacks';
+//import useState here since it will affect the list or grid view IN THE HOMEPAGE 
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header> */}
-
-
+      <Snacks />
     </div>
   );
 }
