@@ -1,0 +1,41 @@
+.section-1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly ;
+    height:250px;
+    width:100%;
+}
+.snack-img{
+    height:100%;
+    width:auto;
+}
+.nutritional-values {
+border:solid 2px red;
+padding:15px;
+text-align: center;
+background-color:#fff6a2;
+}
+.nutritional-values h2{
+    margin-top: 0;
+    border-bottom:2px solid red;
+}
+.nutritional-values ul{
+list-style: none;
+text-align: left;
+padding:5px;
+}
+
+.go-back-btn {
+    display: inline-flex;
+    float: right;
+    border:none;
+    border-radius:5px;
+    padding: 0 15px;
+    color:white;
+    font-weight:bold;
+    height:50px; 
+    background-color:red;
+    width: 140px;
+    height: 31px;
+}
+

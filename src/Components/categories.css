@@ -1,0 +1,18 @@
+.all-snacks {
+    font-family: cursive;
+}
+
+.categories {
+    border: 1px solid lightgray;
+}
+
+button {
+    background-color: rgb(223, 135, 135);
+    border-radius: 7px; 
+    border: none;
+    margin-inline: 7px;
+    width: 70px;
+    height: 21px;
+}
+
+

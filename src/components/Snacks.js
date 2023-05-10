@@ -10,8 +10,8 @@ export default function Snacks() {
 
     useEffect(() => {
         axios.get(`${REACT_APP_API_URL}/snacks`)
-        .then((response) => setSnacks(response.data))
-        .catch((e) => console.error("catch", e))
+            .then((response) => setSnacks(response.data))
+            .catch((e) => console.error("catch", e))
     }, []);
 
     return (
@@ -20,10 +20,10 @@ export default function Snacks() {
             snacks.map((indSnack) => {
         
                 return (
-                    <>
+                    <div key={indSnack.id}>
                     <br />
                     <Snack indSnack={indSnack} />
-                    </>
+                    </div>
                 )
             })
         }
