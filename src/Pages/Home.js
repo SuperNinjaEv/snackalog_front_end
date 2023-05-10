@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom"
 import { useEffect } from "react";
-import Categories from "../Components/Categories";
 
 export default function Home() {
 
