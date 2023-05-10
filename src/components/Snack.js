@@ -1,4 +1,4 @@
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -8,28 +8,22 @@ export default function Snack(props) {
 
     let navigate = useNavigate();
     const [snack, setSnack] = useState({});
-    let { id } = useParams();
 
     useEffect(() => {
-        axios.get(`${REACT_APP_API_URL}/snacks/${id}`)
+        axios.get(`${REACT_APP_API_URL}/snacks/${props.indSnack.id}`)
         .then((response) => {
             setSnack(response.data)
         }).catch((e) => {
             console.error("catch", e)
             navigate("*" || "/not-found")
-            //update to working route after testing
         })
-    }, [id, navigate]);
+    }, []);
 
     return (
-        <>
-        <div className="snack-card" key={props.id}>
-            {/* make img and name links for clicanle to more details page  */}
-            <img style={{"height": 250, "width": 250}} src={props.url} />
-            <p> {props.name} </p>
+        <div className="snack-card" >
+            <img style={{"height": 250, "width": 250}} src={snack.url} onClick={() => navigate(`/snacks/${snack.id}`)} />
+            <p onClick={() => navigate(`/snacks/${snack.id}`)} > {snack.name} </p>
         </div>
-        </>
     )
 }
 
-//include button to go back to homepage of lists of snacks

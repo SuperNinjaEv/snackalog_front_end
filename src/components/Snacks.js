@@ -16,30 +16,17 @@ export default function Snacks() {
 
     return (
         <>
-            {
-                snacks.map((indSnack) => {
-
-                    let name = indSnack.name;
-                    let category = indSnack.category;
-                    let fiber = indSnack.fiber;
-                    let id = indSnack.id;
-                    let favorite = indSnack.is_favorite;
-                    let gluten = indSnack.is_glutenfree;
-                    let vegan = indSnack.is_vegan;
-                    let vegetarian = indSnack.is_vegetarian;
-                    let protein = indSnack.protein;
-                    let sugar = indSnack.sugar;
-                    let url = indSnack.url
-
-                    return (
-                        <>
-                            <br />
-                            <Snack name={name} category={category} fiber={fiber} id={id} favorite={favorite} gluten={gluten} vegan={vegan}
-                                vegetarian={vegetarian} protein={protein} sugar={sugar} url={url} />
-                        </>
-                    )
-                })
-            }
+        {
+            snacks.map((indSnack) => {
+        
+                return (
+                    <div key={indSnack.id}>
+                    <br />
+                    <Snack indSnack={indSnack} />
+                    </div>
+                )
+            })
+        }
         </>
     )
 }

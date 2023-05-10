@@ -41,6 +41,21 @@ list-style: none;
 text-align: left;
 padding:5px;
 }
+
+.go-back-btn {
+    display: inline-flex;
+    float: right;
+    border:none;
+    border-radius:5px;
+    padding: 0 15px;
+    color:white;
+    font-weight:bold;
+    height:50px; 
+    background-color:red;
+    width: 140px;
+    height: 31px;
+}
+
 .buttons{
     margin-left:auto;
     margin-right:auto;
