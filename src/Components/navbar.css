@@ -15,12 +15,12 @@ nav aside{
     align-items: center;
     justify-content: center;
 }
-header img{
+.main-logo{
 width:180px;
 height:180px;
 transform: translateY(10px);
 }
-header img:hover{
+.main-logo:hover{
     transform:scale(1.1);
     cursor:pointer;
 }
