@@ -44,9 +44,8 @@ function SnackNewForm() {
   // const handleSelect = (event) => {}
 
   const handleCheckboxChange = (event) => {
-    console.log(event.target.id)
-    // const opposite = event.target.value === "on" ? true : false
-    setSnack({ ...snack, [event.target.id]: !event.target.value });
+    console.log(event.target.id, event.target.checked)
+    setSnack({ ...snack, [event.target.id]: event.target.checked });
   };
 
   const handleSubmit = (event) => {
@@ -120,7 +119,6 @@ function SnackNewForm() {
         <label htmlFor="is_vegan">Vegan:</label>
         <input
           id="is_vegan"
-          // value={snack.is_vegan}
           type="checkbox"
           onChange={handleCheckboxChange}
           checked={snack.is_vegan}
@@ -128,7 +126,6 @@ function SnackNewForm() {
         <label htmlFor="is_vegetarian">Vegetarian:</label>
         <input
           id="is_vegetarian"
-          value={snack.is_vegetarian}
           type="checkbox"
           onChange={handleCheckboxChange}
           checked={snack.is_vegetarian}
@@ -136,7 +133,6 @@ function SnackNewForm() {
         <label htmlFor="is_glutenfree">Gluten Free:</label>
         <input
           id="is_glutenfree"
-          value={snack.is_glutenfree}
           type="checkbox"
           onChange={handleCheckboxChange}
           checked={snack.is_glutenfree}
@@ -144,7 +140,6 @@ function SnackNewForm() {
         <label htmlFor="is_favorite">Favorite:</label>
         <input
           id="is_favorite"
-          value={snack.is_favorite}
           type="checkbox"
           onChange={handleCheckboxChange}
           checked={snack.is_favorite}
