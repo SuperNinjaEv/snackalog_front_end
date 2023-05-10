@@ -4,7 +4,7 @@ export default function Home(){
     const navigate = useNavigate()
     return(
         <div>
-            <h1>Home</h1>
+            <h1>Snackalog Log</h1>
             <button onClick={()=>navigate('/snacks')}>See All Snacks</button>
         </div>
     )
