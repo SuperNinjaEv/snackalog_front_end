@@ -1,6 +1,7 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Snacks from "./Snacks";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -21,17 +22,30 @@ function SnackNewForm() {
 
   const [snack, setSnack] = useState({
     name: "",
-    url: "",
     category: "",
+    url: "",
+    sugar: 0,
+    protein: 0,
+    fiber: 0,
+    is_vegan: false,
+    is_vegetarian: false,
+    is_glutenfree: false,
     is_favorite: false,
   });
+
+  useEffect(() => {
+    console.log(snack);
+  }, [snack])
 
   const handleTextChange = (event) => {
     setSnack({ ...snack, [event.target.id]: event.target.value });
   };
 
-  const handleCheckboxChange = () => {
-    setSnack({ ...snack, is_favorite: !snack.is_favorite });
+  // const handleSelect = (event) => {}
+
+  const handleCheckboxChange = (event) => {
+    console.log(event.target.id, event.target.checked)
+    setSnack({ ...snack, [event.target.id]: event.target.checked });
   };
 
   const handleSubmit = (event) => {
@@ -51,12 +65,19 @@ function SnackNewForm() {
           required
         />
         <label htmlFor="category">Category:</label>
-        <input
+        <select
+          name="category"
           id="category"
           value={snack.category}
-          type="dropdown"
           onChange={handleTextChange}
-        />
+        >
+          <option>Please Select a Category...</option>
+          <option value="fruits/veggies" >Fruits/Veggies</option>
+          <option value="proteins" >Proteins</option>
+          <option value="dairy" >Dairy</option>
+          <option value="starches" >Starches</option>
+          <option value="sweet/savory" >Sweet/Savory</option>
+        </select>
         <label htmlFor="url">URL:</label>
         <input
           id="url"
@@ -67,14 +88,54 @@ function SnackNewForm() {
           placeholder="http://"
           onChange={handleTextChange}
         />
-        <label htmlFor="category">Category:</label>
+        <label htmlFor="sugar">Sugar:</label>
         <input
-          id="category"
+          id="sugar"
+          value={snack.sugar}
           type="text"
-          name="category"
-          value={snack.category}
-          placeholder="educational, inspirational, ..."
+          pattern="[0-9]*"
           onChange={handleTextChange}
+          placeholder="Amount of Sugar"
+        />
+        <label htmlFor="sugar">Protein:</label>
+        <input
+          id="protein"
+          value={snack.protein}
+          type="text"
+          pattern="[0-9]*"
+          onChange={handleTextChange}
+          placeholder="Amount of Protein"
+        />
+        <label htmlFor="sugar">Fiber:</label>
+        <input
+          id="fiber"
+          value={snack.fiber}
+          type="text"
+          pattern="[0-9]*"
+          onChange={handleTextChange}
+          placeholder="Amount of Fiber"
+        />
+        <br />
+        <label htmlFor="is_vegan">Vegan:</label>
+        <input
+          id="is_vegan"
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          checked={snack.is_vegan}
+        />
+        <label htmlFor="is_vegetarian">Vegetarian:</label>
+        <input
+          id="is_vegetarian"
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          checked={snack.is_vegetarian}
+        />
+        <label htmlFor="is_glutenfree">Gluten Free:</label>
+        <input
+          id="is_glutenfree"
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          checked={snack.is_glutenfree}
         />
         <label htmlFor="is_favorite">Favorite:</label>
         <input
@@ -83,7 +144,6 @@ function SnackNewForm() {
           onChange={handleCheckboxChange}
           checked={snack.is_favorite}
         />
-
         <br />
         <input type="submit" />
       </form>
