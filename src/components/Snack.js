@@ -25,7 +25,7 @@ export default function Snack(props) {
         <>
         <div className="snack-card" key={props.id}>
             {/* make img and name links for clicanle to more details page  */}
-            <img src={props.url} />
+            <img style={{"height": 250, "width": 250}} src={props.url} />
             <p> {props.name} </p>
         </div>
         </>
