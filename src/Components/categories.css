@@ -6,7 +6,7 @@
     border: 1px solid lightgray;
 }
 
-button {
+.cat-btn {
     background-color: rgb(223, 135, 135);
     border-radius: 7px; 
     border: none;

@@ -34,12 +34,12 @@ export default function Categories(props) {
             <h2 className='all-snacks'> All Snacks </h2>
             {/* on click all snacks to show all snacks */}
             <section className="category-btns">
-                <button onClick={(event) => Handlebutton(event)} name='Chips'> Chips </button>
-                <button onClick={(event) => Handlebutton(event)} name='Fruit'> Fruit </button>
-                <button onClick={(event) => Handlebutton(event)} name='Nuts'> Nuts </button>
-                <button onClick={(event) => Handlebutton(event)} name='Starch'> Starch </button>
-                <button onClick={(event) => Handlebutton(event)} name='Meat'> Meat </button>
-                <button onClick={(event) => Handlebutton(event)} name='Dairy'> Dairy </button>
+                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Chips'> Chips </button>
+                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Fruit'> Fruit </button>
+                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Nuts'> Nuts </button>
+                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Starch'> Starch </button>
+                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Meat'> Meat </button>
+                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Dairy'> Dairy </button>
             </section>
             <br />
         </div>

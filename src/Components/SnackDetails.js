@@ -21,7 +21,7 @@ export default function SnackDetails() {
   };
   return (
     <div>
-      <button className='go-back-btn' onClick={() => navigate(-1)}> Go Back To All Snacks </button>
+      <button className='go-back-btn' onClick={() => navigate(-1)}> ⬅ All Snacks </button>
       <header className='snack-details-header'>
         {snack.is_favorite && (
           <img src={heart} alt='favorite snack' className='symbol' />

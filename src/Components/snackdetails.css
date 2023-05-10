@@ -44,7 +44,7 @@ padding:5px;
 
 .go-back-btn {
     display: inline-flex;
-    float: right;
+    float: left;
     border:none;
     border-radius:5px;
     padding: 0 15px;
@@ -52,8 +52,12 @@ padding:5px;
     font-weight:bold;
     height:50px; 
     background-color:red;
-    width: 140px;
     height: 31px;
+    align-items: center;
+}
+.go-back-btn:hover{
+    cursor:pointer;
+    background-color: crimson;
 }
 
 .buttons{
