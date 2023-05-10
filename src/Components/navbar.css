@@ -15,13 +15,14 @@ nav aside{
     align-items: center;
     justify-content: center;
 }
-header img{
+.main-logo{
 width:180px;
 height:180px;
 transform: translateY(10px);
 }
-header img:hover{
-    transform:scale(1.1)
+.main-logo:hover{
+    transform:scale(1.1);
+    cursor:pointer;
 }
 .add-btn{
     grid-column-start: 4;
@@ -32,4 +33,8 @@ header img:hover{
     color:white;
     font-weight:bold;
     height:40px;
+}
+.add-btn:hover{
+    cursor: pointer;
+    background-color:green;
 }
