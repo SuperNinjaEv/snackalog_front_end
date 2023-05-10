@@ -6,17 +6,20 @@ import './snackdetails.css';
 const API = process.env.REACT_APP_API_URL;
 export default function SnackDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [snack, setSnack] = useState({});
   useEffect(() => {
     axios.get(`${API}/snacks/${id}`).then(res => setSnack(res.data));
   }, [id]);
+
+  const handleDelete = () => {
+    axios.delete(`${API}/snacks/${id}`).then(_ => navigate('/snacks'));
+  };
   return (
     <div>
       <h1>{snack.name}</h1>
       <section className='section-1'>
-        <aside>
-          <img src={snack.url} alt='snack' />
-        </aside>
+        <img src={snack.url} alt='snack' className='snack-img' />
         <aside className='nutritional-values'>
           <h2>Nutritional Values</h2>
           <ul>
@@ -26,6 +29,8 @@ export default function SnackDetails() {
           </ul>
         </aside>
       </section>
+      <button onClick={() => navigate(`/snacks/${snack.id}/edit`)}>Edit</button>
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 }
