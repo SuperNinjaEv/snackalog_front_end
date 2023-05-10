@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-function SnackNewForm() {
+export default function SnackNewForm() {
   let navigate = useNavigate();
 
   const addSnack = (newSnack) => {
@@ -43,7 +43,7 @@ function SnackNewForm() {
   // const handleSelect = (event) => {}
 
   const handleCheckboxChange = (event) => {
-    console.log(event.target.id, event.target.checked)
+    // console.log(event.target.id, event.target.checked)
     setSnack({ ...snack, [event.target.id]: event.target.checked });
   };
 
@@ -148,6 +148,4 @@ function SnackNewForm() {
       </form>
     </div>
   );
-}
-
-export default SnackNewForm;
+};
