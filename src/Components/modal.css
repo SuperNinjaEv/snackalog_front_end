@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  background-color: rgba(78, 76, 76, 0.4);
+  background-color: rgba(78, 76, 76, 0.859);
 }
 .modal {
   background-color: white;
