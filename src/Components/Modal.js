@@ -15,8 +15,8 @@ export default function Modal({ handleDelete, handleClose, snack }) {
     },)
   return (
     <div className='modal-outer'>
-      <div className='modal' ref={ref}>
-        <h1>Are you sure you want to delete {snack.name} from your snacks?</h1>
+      <div className='custom-modal' ref={ref}>
+        <h2>Are you sure you want to delete <span className='modal-snack-name' >{snack.name}</span> from your snacks?</h2>
         <img className='modal-img' src={snack.url} alt={snack.name}/>
         <div className='modal-buttons'>
           <button className='modal-btn cancel-btn' onClick={handleClose}>Cancel</button>

@@ -7,18 +7,23 @@
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  background-color: rgba(78, 76, 76, 0.4);
+  background-color: rgba(78, 76, 76, 0.7);
 }
-.modal {
+.custom-modal {
   background-color: white;
-  top:100px;
+  top:25%;
   left:50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-25%);
   z-index: 3;
   width: 500px;
   height: 300px;
   position: absolute;
   border-radius: 10px;;
+}
+.modal-snack-name{
+    color:red;
+    text-decoration: underline;
+    font-style: italic;
 }
 .modal-img{
     width:20%;
@@ -32,6 +37,7 @@
 .modal-btn{
     margin-left:15px;
 }
+
 .cancel-btn{
     background-color:darkgray;
     border:none;
