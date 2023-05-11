@@ -1,12 +1,16 @@
 import Snacks from "../Components/Snacks";
 import Categories from '../Components/Categories';
+import { useState, useEffect } from 'react';
 
 function Index() {
+
+  const [selectedCategory, setSelectedCategory] = useState("");
+
   return (
     <div className="Index">
-      <Categories />
+      <Categories selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
       <h2>Snacks-A-Hoy!</h2>
-      <Snacks />
+      <Snacks selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
     </div>
   );
 }

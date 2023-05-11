@@ -1,44 +1,25 @@
 import './categories.css';
-import axios from "axios";
-import { useState, useEffect } from "react";
 
 export default function Categories(props) {
 
-    const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
-
-    const [category, setCategory] = useState("");
-
-    useEffect(() => {
-        
-        axios.get(`${REACT_APP_API_URL}/snacks`)
-        .then((response) => {
-            response.data.map((snack) => {
-                setCategory(snack.category)
-            })
-        }).catch((e) => console.error("catch", e))
-    }, [Handlebutton])
-
     function Handlebutton(event) {
-        event.preventDefault();
+        //event.preventDefault();
 
-        if (event.target.name === category) {
-            props.setCategorizeSnacks(event.target.name);
-        }
+        props.setSelectedCategory(event.target.name);
+        //SUCCESFULLY SETTING 
     }
-
-    //this code is successfull so far
 
     return (
         <div className='categories'>
             {/* how to make a toggle button */}
-            <h2 className='all-snacks'> All Snacks </h2>
+            <h2 className='all-snacks' name='all-snacks' onClick={(event) => Handlebutton(event)}> All Snacks </h2>
             {/* on click all snacks to show all snacks */}
             <section className="category-btns">
-                <button onClick={(event) => Handlebutton(event)} name='Chips'> Chips </button>
-                <button onClick={(event) => Handlebutton(event)} name='Fruit'> Fruit </button>
-                <button onClick={(event) => Handlebutton(event)} name='Nuts'> Nuts </button>
-                <button onClick={(event) => Handlebutton(event)} name='Starch'> Starch </button>
-                <button onClick={(event) => Handlebutton(event)} name='Meat'> Meat </button>
+                <button onClick={(event) => Handlebutton(event)} name='Other'> Other </button>
+                <button onClick={(event) => Handlebutton(event)} name='Fruits/Veggies'> Fruits/Veggies </button>
+                <button onClick={(event) => Handlebutton(event)} name='Proteins'> Proteins </button>
+                <button onClick={(event) => Handlebutton(event)} name='Grains'> Grains </button>
+                <button onClick={(event) => Handlebutton(event)} name='Sweet/Savory'> Sweet/Savory </button>
                 <button onClick={(event) => Handlebutton(event)} name='Dairy'> Dairy </button>
             </section>
             <br />

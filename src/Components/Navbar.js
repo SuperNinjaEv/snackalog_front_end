@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav>
       <header>
-       <img onClick={()=>navigate('/')} src={logo} alt='snackalog logo'/>
+       <img className='main-logo' onClick={()=>navigate('/')} src={logo} alt='snackalog logo'/>
       </header>
       <aside>
         <button onClick={()=>navigate('/snacks/new')} className='add-btn'> ＋ Snack </button>
