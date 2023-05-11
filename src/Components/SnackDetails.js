@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import Modal from './Modal'
 import gluten from '../assets/glutenfree.svg';
 import vegan from '../assets/vegan.svg';
 import veggie from '../assets/vegetarian.svg';
@@ -12,15 +13,23 @@ export default function SnackDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [snack, setSnack] = useState({});
+  const [modal, setModal] = useState(false)
   useEffect(() => {
     axios.get(`${API}/snacks/${id}`).then(res => setSnack(res.data));
   }, [id]);
 
+  const handleClose=()=>{
+    setModal(false)
+  }
   const handleDelete = () => {
-    axios.delete(`${API}/snacks/${id}`).then(_ => navigate('/snacks'));
+    setModal(true)
   };
+  const confirmDelete=()=>{
+    axios.delete(`${API}/snacks/${id}`).then(_ => navigate('/snacks'));
+  }
   return (
     <div>
+      {modal&&<Modal handleDelete={confirmDelete} snack={snack} handleClose={handleClose}/>}
       <button className='go-back-btn' onClick={() => navigate(-1)}> ⬅ All Snacks </button>
       <header className='snack-details-header'>
         {snack.is_favorite && (
