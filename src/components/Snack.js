@@ -1,76 +1,4 @@
-// import { useNavigate } from "react-router-dom";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
 
-// const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
-
-// export default function Snack(props) {
-
-//     let navigate = useNavigate();
-//     const [snack, setSnack] = useState({});
-
-//     useEffect(() => {
-//         axios.get(`${REACT_APP_API_URL}/snacks/${props.indSnack.id}`)
-//         //issue here
-//         .then((response) => {
-//             setSnack(response.data)
-//         }).catch((e) => {
-//             console.error("catch", e)
-//             navigate("*" || "/not-found")
-//         })
-//     }, []);
-
-//     //it has to be data map so that multiple are sh
-
-//     // if (props.theSnack === props.indSnack) {
-
-//     //     return (
-//     //         <div className="snack-card">
-//     //             <img style={{"height": 250, "width": 250}} src={snack.url} onClick={() => navigate(`/snacks/${snack.id}`)} />
-//     //             <p onClick={() => navigate(`/snacks/${snack.id}`)} > {snack.name} </p>
-//     //         </div>
-//     //     )
-//     // }
-
-//     // return (
-//     //     <>
-//     //     {
-//     //         if (props.indSnack === props.theSnack) {
-
-//     //             return (
-//     //                 <div>
-//     //                 </div>
-//     //             )
-//     //         }
-//     //     }
-//     //     </>
-
-//     //     // {
-//     //     //     if (props.indSnack === props.theSnack) {
-
-//     //     //         return (
-//     //     //             <div>
-//     //     //             </div>
-//     //     //         )
-//     //     //     }
-//     //     // }
-
-//     //     // // if (props.indSnack === props.theSnack) {
-
-//     //     // //     return (
-//     //     // //         <div className="snack-card" >
-//     //     // //     <img style={{"height": 250, "width": 250}} src={snack.url} onClick={() => navigate(`/snacks/${snack.id}`)} />
-//     //     // //     <p onClick={() => navigate(`/snacks/${snack.id}`)} > {snack.name} </p>
-//     //     // // </div>
-                
-//     //     // //     )
-//     //     // // }
-        
-//     // )
-// }
-
-
-//////////////////////////
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -80,12 +8,15 @@ const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 export default function Snack(props) {
 
     let navigate = useNavigate();
-    const [snack, setSnack] = useState({});
+
+    const [theSnack, setTheSnack] = useState({});
 
     useEffect(() => {
-        axios.get(`${REACT_APP_API_URL}/snacks/${props.theSnack.id}`)
+        axios.get(`${REACT_APP_API_URL}/snacks/${props.snack.id}`)
         .then((response) => {
-            setSnack(response.data)
+            setTheSnack(response.data)
+            //not sure what this data will be used for or if it will even be used at all honestly it 
+            //the purpose might just be succesfull redirecting or sumn 
         }).catch((e) => {
             console.error("catch", e)
             navigate("*" || "/not-found")
@@ -94,8 +25,8 @@ export default function Snack(props) {
 
     return (
         <div className="snack-card" >
-            <img style={{"height": 250, "width": 250}} src={snack.url} onClick={() => navigate(`/snacks/${snack.id}`)} />
-            <p onClick={() => navigate(`/snacks/${snack.id}`)} > {snack.name} </p>
+            <img style={{"height": 250, "width": 250}} src={props.snack.url} onClick={() => navigate(`/snacks/${props.snack.id}`)} />
+            <p onClick={() => navigate(`/snacks/${props.snack.id}`)} > {props.snack.name} </p>
         </div>
 
     )
