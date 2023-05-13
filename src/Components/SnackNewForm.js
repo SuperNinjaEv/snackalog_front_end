@@ -2,6 +2,10 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+//import { Form } from "react-bootstrap";
+import "./snackForm.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
 const API = process.env.REACT_APP_API_URL;
 
 export default function SnackNewForm() {
@@ -53,96 +57,114 @@ export default function SnackNewForm() {
   };
   return (
     <div className="New">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          value={snack.name}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Name of Snack"
-          required
-        />
-        <label htmlFor="category">Category:</label>
-        <select
-          name="category"
-          id="category"
-          value={snack.category}
-          onChange={handleTextChange}
-        >
-          <option>Please Select a Category...</option>
-          <option value="fruits/veggies" >Fruits/Veggies</option>
-          <option value="proteins" >Proteins</option>
-          <option value="dairy" >Dairy</option>
-          <option value="starches" >Starches</option>
-          <option value="sweet/savory" >Sweet/Savory</option>
-        </select>
-        <label htmlFor="url">URL:</label>
-        <input
-          id="url"
-          type="text"
-          pattern="http[s]*://.+"
-          required
-          value={snack.url}
-          placeholder="http://"
-          onChange={handleTextChange}
-        />
-        <label htmlFor="sugar">Sugar:</label>
-        <input
-          id="sugar"
-          value={snack.sugar}
-          type="text"
-          pattern="[0-9]*"
-          onChange={handleTextChange}
-          placeholder="Amount of Sugar"
-        />
-        <label htmlFor="sugar">Protein:</label>
-        <input
-          id="protein"
-          value={snack.protein}
-          type="text"
-          pattern="[0-9]*"
-          onChange={handleTextChange}
-          placeholder="Amount of Protein"
-        />
-        <label htmlFor="sugar">Fiber:</label>
-        <input
-          id="fiber"
-          value={snack.fiber}
-          type="text"
-          pattern="[0-9]*"
-          onChange={handleTextChange}
-          placeholder="Amount of Fiber"
-        />
+
+      <form className="rounded p-4 p-sm-3" onSubmit={handleSubmit}>
+
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            id="name"
+            value={snack.name}
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Name of Snack"
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="url">Snack Image URL:</label>
+          <input
+            id="url"
+            type="text"
+            pattern="http[s]*://.+"
+            // required
+            value={snack.url}
+            placeholder="http://"
+            onChange={handleTextChange}
+          />
+        </div>
+
+        <div className="nutritional">
+          <label htmlFor="sugar">Sugar:</label>
+          <input
+            id="sugar"
+            value={snack.sugar}
+            type="text"
+            pattern="^\d*(\.\d{0,2})?$"
+            onChange={handleTextChange}
+            placeholder="Amount of Sugar"
+          />
+          <label htmlFor="sugar">Protein:</label>
+          <input
+            id="protein"
+            value={snack.protein}
+            type="text"
+            pattern="^\d*(\.\d{0,2})?$"
+            onChange={handleTextChange}
+            placeholder="Amount of Protein"
+          />
+          <label htmlFor="sugar">Fiber:</label>
+          <input
+            id="fiber"
+            value={snack.fiber}
+            type="text"
+            pattern="^\d*(\.\d{0,2})?$"
+            onChange={handleTextChange}
+            placeholder="Amount of Fiber"
+          />
+        </div>
         <br />
-        <label htmlFor="is_vegan">Vegan:</label>
-        <input
-          id="is_vegan"
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={snack.is_vegan}
-        />
-        <label htmlFor="is_vegetarian">Vegetarian:</label>
-        <input
-          id="is_vegetarian"
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={snack.is_vegetarian}
-        />
-        <label htmlFor="is_glutenfree">Gluten Free:</label>
-        <input
-          id="is_glutenfree"
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={snack.is_glutenfree}
-        />
-        <label htmlFor="is_favorite">Favorite:</label>
-        <input
-          id="is_favorite"
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={snack.is_favorite}
-        />
+
+        <div>
+          <label htmlFor="category">Category:</label>
+          <select
+            name="category"
+            id="category"
+            value={snack.category}
+            onChange={handleTextChange}>
+            <option>Please Select a Category...</option>
+            <option value="fruits/veggies" >Fruits/Veggies</option>
+            <option value="proteins" >Proteins</option>
+            <option value="dairy" >Dairy</option>
+            <option value="grains" >Grains</option>
+            <option value="sweet/savory" >Sweet/Savory</option>
+            <option value="other" >Other</option>
+          </select>
+        </div>
+        <br />
+
+        <div className="is">
+          <label htmlFor="is_vegan">Vegan:</label>
+          <input
+            id="is_vegan"
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            checked={snack.is_vegan}
+          />
+          <label htmlFor="is_vegetarian">Vegetarian:</label>
+          <input
+            id="is_vegetarian"
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            checked={snack.is_vegetarian}
+          />
+          <label htmlFor="is_glutenfree">Gluten Free:</label>
+          <input
+            id="is_glutenfree"
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            checked={snack.is_glutenfree}
+          />
+          <label htmlFor="is_favorite">Favorite:</label>
+          <input
+            id="is_favorite"
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            checked={snack.is_favorite}
+          />
+        </div>
+
         <br />
         <input type="submit" />
       </form>
