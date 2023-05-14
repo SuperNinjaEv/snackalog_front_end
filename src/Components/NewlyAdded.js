@@ -13,7 +13,6 @@ export default function NewlyAdded() {
   }, []);
   useEffect(() => {
     if (snacks.length > 0) {
-      console.log(snacks[0].created_at.toString());
       const newSnacks = snacks.filter(
         snack =>
           snack.created_at.toString().split(' ')[1] == dateArr[1] &&
