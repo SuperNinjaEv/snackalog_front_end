@@ -1,8 +1,6 @@
-
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
 
 export default function Snack(props) {
 
@@ -24,8 +22,8 @@ const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
     return (
         <div className="snack-card" >
-            <img style={{"height": 250, "width": 250}} src={props.snack.url} onClick={() => navigate(`/snacks/${props.snack.id}`)} />
-            <p onClick={() => navigate(`/snacks/${props.snack.id}`)} > {props.snack.name} </p>
+            <img style={{"height": 250, "width": 250}} src={theSnack.url} onClick={() => navigate(`/snacks/${theSnack.id}`)} />
+            <p onClick={() => navigate(`/snacks/${theSnack.id}`)} > {theSnack.name} </p>
         </div>
 
     )

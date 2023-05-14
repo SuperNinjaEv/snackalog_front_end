@@ -10,6 +10,7 @@ export default function Categories(props) {
     return (
         <div className='categories'>
             {/* how to make a toggle button */}
+            <br />
             <h2 className='all-snacks' name='all-snacks' onClick={(event) => Handlebutton(event)}> All Snacks </h2>
             <section className="category-btns">
                 <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Sweet/Savory'> Sweet/Savory </button>
@@ -23,3 +24,9 @@ export default function Categories(props) {
         </div>
     )
 }
+
+//first we make the list view a state and we make it the default 
+
+//then we change the state based on the botton click and therfore the view as well. 
+
+//lets start with putting css whitin a state 

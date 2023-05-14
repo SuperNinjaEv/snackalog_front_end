@@ -1,6 +1,7 @@
 import Snack from "./Snack";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import './snack.css';
 
 export default function Snacks(props) {
 
