@@ -29,7 +29,7 @@ export default function Snack(props) {
   return (
     <div
       onClick={() => navigate(`/snacks/${theSnack.id}`)}
-      className='snack-card-index'
+      className={props.view==='grid'?'snack-card-list':'snack-card-index'}
     >
       <img
         className='snack-card-index-img'

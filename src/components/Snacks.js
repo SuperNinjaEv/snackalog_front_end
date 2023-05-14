@@ -27,7 +27,7 @@ export default function Snacks(props) {
         ) {
           return (
             <div key={snack.id}>
-              <Snack snack={snack} />
+              <Snack snack={snack} view={props.view}/>
             </div>
           );
         }

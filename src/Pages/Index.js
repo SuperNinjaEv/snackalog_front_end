@@ -20,6 +20,7 @@ function Index() {
       <br />
       <div className='snacks-index'>
         <Snacks
+        view={view}
           selectedCategory={selectedCategory}
           REACT_APP_API_URL={REACT_APP_API_URL}
         />
