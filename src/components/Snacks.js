@@ -27,7 +27,7 @@ export default function Snacks(props) {
                     )
                 }
 
-                else if (props.selectedCategory === snack.category) {
+                else if (props.selectedCategory.toLowerCase() === snack.category.toLowerCase()) {
 
                     return (
                         <div key={snack.id}>
