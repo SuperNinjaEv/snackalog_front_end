@@ -15,7 +15,19 @@ export default function SnackDetails() {
   const [snack, setSnack] = useState({});
   const [modal, setModal] = useState(false);
   useEffect(() => {
-    axios.get(`${API}/snacks/${id}`).then(res => setSnack(res.data));
+    axios.get(`${API}/snacks/${id}`)
+      .then(res => {
+        if (res.data.name === 'QueryResultError') {
+          console.log(res.data)
+          navigate('*')
+        } else {
+          setSnack(res.data)
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        navigate('*');
+      });
   }, [id]);
 
   const handleClose = () => {
