@@ -1,15 +1,14 @@
-import axios from "axios";
 import Snack from "./Snack";
+import axios from "axios";
 import { useState, useEffect } from "react";
+import './snack.css';
 
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
-
-export default function Snacks() {
+export default function Snacks(props) {
 
     const [snacks, setSnacks] = useState([]);
 
     useEffect(() => {
-        axios.get(`${REACT_APP_API_URL}/snacks`)
+        axios.get(`${props.REACT_APP_API_URL}/snacks`)
             .then((response) => setSnacks(response.data))
             .catch((e) => console.error("catch", e))
     }, []);
@@ -17,14 +16,25 @@ export default function Snacks() {
     return (
         <>
         {
-            snacks.map((indSnack) => {
-        
-                return (
-                    <div key={indSnack.id}>
-                    <br />
-                    <Snack indSnack={indSnack} />
-                    </div>
-                )
+               snacks.map((snack) => {
+
+                if (props.selectedCategory === "all-snacks") {
+
+                    return (
+                        <div key={snack.id}>
+                        <Snack snack={snack} />
+                        </div> 
+                    )
+                }
+
+                else if (props.selectedCategory.toLowerCase() === snack.category.toLowerCase()) {
+
+                    return (
+                        <div key={snack.id}>
+                        <Snack snack={snack} />
+                        </div> 
+                    )
+                } 
             })
         }
         </>

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Form } from "react-bootstrap";
+//import { Form } from "react-bootstrap";
 import "./snackForm.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -124,12 +124,12 @@ export default function SnackNewForm() {
             value={snack.category}
             onChange={handleTextChange}>
             <option>Please Select a Category...</option>
-            <option value="fruits/veggies" >Fruits/Veggies</option>
-            <option value="proteins" >Proteins</option>
-            <option value="dairy" >Dairy</option>
-            <option value="grains" >Grains</option>
-            <option value="sweet/savory" >Sweet/Savory</option>
-            <option value="other" >Other</option>
+            <option value="Fruits/Veggies" >Fruits/Veggies</option>
+            <option value="Proteins" >Proteins</option>
+            <option value="Dairy" >Dairy</option>
+            <option value="Grains" >Grains</option>
+            <option value="Sweet/Savory" >Sweet/Savory</option>
+            <option value="Other" >Other</option>
           </select>
         </div>
         <br />

@@ -1,47 +1,31 @@
 import './categories.css';
-import axios from "axios";
-import { useState, useEffect } from "react";
 
 export default function Categories(props) {
 
-    const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
-
-    const [category, setCategory] = useState("");
-
-    useEffect(() => {
-        
-        axios.get(`${REACT_APP_API_URL}/snacks`)
-        .then((response) => {
-            response.data.map((snack) => {
-                setCategory(snack.category)
-            })
-        }).catch((e) => console.error("catch", e))
-    }, [Handlebutton])
-
     function Handlebutton(event) {
-        event.preventDefault();
 
-        if (event.target.name === category) {
-            props.setCategorizeSnacks(event.target.name);
-        }
+        props.setSelectedCategory(event.target.name);
     }
-
-    //this code is successfull so far
 
     return (
         <div className='categories'>
             {/* how to make a toggle button */}
-            <h2 className='all-snacks'> All Snacks </h2>
-            {/* on click all snacks to show all snacks */}
-            <section className="category-btns">
-                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Chips'> Chips </button>
-                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Fruit'> Fruit </button>
-                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Nuts'> Nuts </button>
-                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Starch'> Starch </button>
-                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Meat'> Meat </button>
-                <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Dairy'> Dairy </button>
-            </section>
-            <br />
+                <div className='cat-row'>
+                    <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Sweet/Savory'> Sweet/Savory </button>
+                    <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Fruits/Veggies'> Fruits/Veggies </button>
+                    <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Grains'> Grains </button>
+                </div>
+                <div className='cat-row'>
+                    <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Proteins'> Proteins </button>
+                    <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Dairy'> Dairy </button>
+                    <button className='cat-btn' onClick={(event) => Handlebutton(event)} name='Other'> Other </button>
+                </div>
         </div>
     )
 }
+
+//first we make the list view a state and we make it the default 
+
+//then we change the state based on the botton click and therfore the view as well. 
+
+//lets start with putting css whitin a state 
