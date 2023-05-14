@@ -4,7 +4,6 @@ import axios from 'axios';
 import gluten from '../assets/glutenfree.svg';
 import vegan from '../assets/vegan.svg';
 import veggie from '../assets/vegetarian.svg';
-import heart from '../assets/heart.svg';
 
 export default function Snack(props) {
   const REACT_APP_API_URL = process.env.REACT_APP_API_URL;

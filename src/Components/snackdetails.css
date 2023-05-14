@@ -46,8 +46,6 @@
 .go-back-btn {
   position: absolute;
   left: 10%;
-  /* display: inline-flex; */
-  /* float: left; */
   border: none;
   border-radius: 5px;
   padding: 0 15px;

@@ -18,7 +18,7 @@ export default function Snacks(props) {
       {snacks.map(snack => {
         if (props.selectedCategory === 'all-snacks') {
           return (
-            <div key={snack.id}>
+            <div key={snack.id} style={{display: props.viewMode}}>
               <Snack snack={snack} />
             </div>
           );
@@ -26,7 +26,7 @@ export default function Snacks(props) {
           props.selectedCategory.toLowerCase() === snack.category.toLowerCase()
         ) {
           return (
-            <div key={snack.id}>
+            <div key={snack.id} style={{display: props.viewMode}}>
               <Snack snack={snack} />
             </div>
           );
