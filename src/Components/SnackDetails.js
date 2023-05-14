@@ -57,7 +57,7 @@ export default function SnackDetails() {
           handleClose={handleClose}
         />
       )}
-      <button className='go-back-btn' onClick={() => navigate(-1)}>
+      <button className='go-back-btn' onClick={() => navigate('/snacks')}>
         {' '}
         ⬅ All Snacks{' '}
       </button>
