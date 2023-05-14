@@ -10,6 +10,7 @@
 }
 .newly-added-home h2 {
   margin-bottom: 0;
+  color:red;
 }
 .favorites-home {
   overflow-y: scroll;
@@ -19,9 +20,11 @@
   background-color: #fff6a2;
 }
 .favorites-home h2 {
-  position: fixed;
+  position: absolute;
+  z-index:2;
   background-color: #fff6a2;
   width: 342px;
+  color:red;
   margin-bottom: 0;
 }
 .newly-added-snacks {
