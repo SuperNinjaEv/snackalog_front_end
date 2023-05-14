@@ -9,6 +9,9 @@ export default function Home() {
   return (
     <div>
       <section className='home-grid'>
+      <button className='all-snacks-btn' onClick={() => navigate('/snacks')}>
+        See All Snacks
+      </button>
         <div className='favorites-home'>
           <h2>Favorites</h2>
           <Favorites />
@@ -19,9 +22,6 @@ export default function Home() {
           <NewlyAdded />
         </div>
       </section>
-      <button className='all-snacks-btn' onClick={() => navigate('/snacks')}>
-        See All Snacks
-      </button>
     </div>
   );
 }

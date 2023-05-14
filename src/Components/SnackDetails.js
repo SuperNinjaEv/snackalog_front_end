@@ -14,6 +14,7 @@ export default function SnackDetails() {
   const navigate = useNavigate();
   const [snack, setSnack] = useState({});
   const [modal, setModal] = useState(false);
+  //const [snackNote, setSnackNote] = useState("");
   useEffect(() => {
     axios.get(`${API}/snacks/${id}`)
       .then(res => {
@@ -39,6 +40,14 @@ export default function SnackDetails() {
   const confirmDelete = () => {
     axios.delete(`${API}/snacks/${id}`).then(_ => navigate('/snacks'));
   };
+
+  // function handleNotes(event) {
+  //   event.preventDefault();
+
+  //   setSnackNote(event.target.note);
+    
+  // }
+
   return (
     <div>
       {modal && (
@@ -48,7 +57,7 @@ export default function SnackDetails() {
           handleClose={handleClose}
         />
       )}
-      <button className='go-back-btn' onClick={() => navigate(-1)}>
+      <button className='go-back-btn' onClick={() => navigate('/snacks')}>
         {' '}
         ⬅ All Snacks{' '}
       </button>
@@ -82,6 +91,13 @@ export default function SnackDetails() {
             )}
           </aside>
         </aside>
+        {/* <section className='snack-notes'>
+        <form>
+            <label> Snack Notes </label>
+            <input type='text' onKeyUp={event => handleNotes(event)} name='note'/>
+            <button type='submit'> Add Note </button>
+        </form>
+        </section> */}
       </section>
       <section className='buttons'>
         <button className='delete-btn' onClick={handleDelete}>
@@ -97,3 +113,4 @@ export default function SnackDetails() {
     </div>
   );
 }
+
