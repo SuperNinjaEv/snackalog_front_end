@@ -170,7 +170,7 @@ export default function SnackEditForm() {
             </div>
     
             <br />
-            <input type="submit" />
+            <input className="raise" type="submit" />
           </form>
         </div>
       );
