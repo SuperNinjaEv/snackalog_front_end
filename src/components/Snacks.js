@@ -12,8 +12,6 @@ export default function Snacks(props) {
             .catch((e) => console.error("catch", e))
     }, []);
 
-    //style={{"height": 250, "width": 250}}
-//style={{"display": props.snackView}}
     return (
         <div >
         {
@@ -22,16 +20,16 @@ export default function Snacks(props) {
                 if (props.selectedCategory === "all-snacks") {
 
                     return (
-                        <div key={snack.id} className="snacks" >
+                        <div key={snack.id} className="snacks" style={{display: props.viewMode}} >
                         <Snack snack={snack} />
                         </div> 
                     )
                 }
 
-                if (props.selectedCategory === snack.category) {
+                else if (props.selectedCategory.toLowerCase() === snack.category.toLowerCase()) {
 
                     return (
-                        <div key={snack.id} className="snacks">
+                        <div key={snack.id} className="snacks" style={{display: props.viewMode}}>
                         <Snack snack={snack} />
                         </div> 
                     )

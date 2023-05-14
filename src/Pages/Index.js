@@ -5,7 +5,24 @@ import ReactSwitch from 'react-switch';
 
 function Index() {
 
-  //const [viewMode, setViewMode] = useState(false);
+  const [viewMode, setViewMode] = useState("inline-grid");
+
+  const [gridOrList, setGridorList] = useState("grid view")
+
+  function handleViewMode() {
+
+    if (viewMode === "inline-grid") {
+
+      setViewMode("grid");
+      setGridorList("list");
+    }
+
+    else if (viewMode === "grid") {
+
+      setViewMode("inline-grid");
+      setGridorList("Grid");
+    } 
+  }
 
   const [selectedCategory, setSelectedCategory] = useState("all-snacks");
 
@@ -13,11 +30,11 @@ function Index() {
 
   return (
     <div className="Index">
+      <button onClick={handleViewMode}> {gridOrList} </button>
+      <h2>Snacks-A-Hoy!</h2>
       <Categories setSelectedCategory={setSelectedCategory} />
       <br />
-      <h2>Snacks-A-Hoy!</h2>
-      <br />
-      <Snacks selectedCategory={selectedCategory} REACT_APP_API_URL={REACT_APP_API_URL} />
+      <Snacks selectedCategory={selectedCategory} REACT_APP_API_URL={REACT_APP_API_URL} viewMode={viewMode} />
     </div>
   );
 }
