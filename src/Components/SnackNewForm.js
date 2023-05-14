@@ -166,7 +166,7 @@ export default function SnackNewForm() {
         </div>
 
         <br />
-        <input type="submit" />
+        <input className="raise" type="submit" />
       </form>
     </div>
   );
