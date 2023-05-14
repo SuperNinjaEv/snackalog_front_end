@@ -1,31 +1,31 @@
 .all-snacks {
-    font-family: cursive;
+  font-family: cursive;
 }
 
 .categories {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-evenly;
-    padding-top: 10px;
-    /* max-width: 50%; */
-    min-width: 200px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  /* max-width: 50%; */
+  min-width: 200px;
 }
 
 .cat-row {
-    padding-bottom: 10px;
-    justify-content: flex-start;
+  padding-bottom: 10px;
+  justify-content: flex-start;
 }
 
 .cat-btn {
-    background-color: rgb(223, 135, 135);
-    border-radius: 7px; 
-    border: none;
-    margin-inline: 7px;
-    width: 117px;
-    height: 27px;
-    color: white;
+  background-color: rgb(223, 135, 135);
+  border-radius: 7px;
+  border: none;
+  margin-inline: 7px;
+  width: 117px;
+  height: 27px;
+  color: white;
 }
 
 .cat-btn:hover {
@@ -37,3 +37,8 @@
 }
 
 
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}

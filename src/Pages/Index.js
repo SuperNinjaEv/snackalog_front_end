@@ -1,4 +1,4 @@
-import Snacks from "../Components/Snacks";
+import Snacks from '../Components/Snacks';
 import Categories from '../Components/Categories';
 import { useState } from 'react';
 import ReactSwitch from 'react-switch';
@@ -24,17 +24,16 @@ function Index() {
     } 
   }
 
-  const [selectedCategory, setSelectedCategory] = useState("all-snacks");
+  const [selectedCategory, setSelectedCategory] = useState('all-snacks');
 
   const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
   return (
     <div className="Index">
-      <button onClick={handleViewMode}> {gridOrList} </button>
       <h2>Snacks-A-Hoy!</h2>
-      <Categories setSelectedCategory={setSelectedCategory} />
+      <Categories setSelectedCategory={setSelectedCategory} setView={setView} view={view} />
       <br />
-      <Snacks selectedCategory={selectedCategory} REACT_APP_API_URL={REACT_APP_API_URL} viewMode={viewMode} />
+      <Snacks selectedCategory={selectedCategory} REACT_APP_API_URL={REACT_APP_API_URL} />
     </div>
   );
 }
