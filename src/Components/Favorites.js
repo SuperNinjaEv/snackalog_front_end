@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 const API = process.env.REACT_APP_API_URL;
 export default function Favorites() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
   useEffect(() => {
     axios

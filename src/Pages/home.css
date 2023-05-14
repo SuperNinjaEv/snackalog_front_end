@@ -18,12 +18,11 @@
   width: 350px;
   background-color: #fff6a2;
 }
-.favorites-home h2{
-    position: fixed;
-    background-color: #fff6a2;
-    width:342px;
-    margin-bottom:0 ;
-
+.favorites-home h2 {
+  position: fixed;
+  background-color: #fff6a2;
+  width: 342px;
+  margin-bottom: 0;
 }
 .newly-added-snacks {
   display: flex;
@@ -45,15 +44,15 @@
   width: 200px;
   height: 200px;
 }
-.all-snacks-btn{
-    background-color:red;
-    border:none;
-    border-radius:5px;
-    padding: 0 15px;
-    color:white;
-    font-weight:bold;
-    height:40px;
-    position: absolute;
-    bottom:10px;
-    right:5%;
+.all-snacks-btn {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  position: absolute;
+  bottom: 10px;
+  right: 5%;
 }

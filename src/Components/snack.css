@@ -1,30 +1,30 @@
-.snack-card-index{
-width:300px;
-height:360px;
-border:red solid 2px;
-background-color: #fff6a2;
-margin-bottom: 20px;
-margin-right:10px;
+.snack-card-index {
+  width: 300px;
+  height: 360px;
+  border: red solid 2px;
+  background-color: #fff6a2;
+  margin-bottom: 20px;
+  margin-right: 10px;
 }
-.snack-card-index-img{
-    height: 250px;
-    width:295px;
-    border-bottom: solid black 1px;
+.snack-card-index-img {
+  height: 250px;
+  width: 295px;
+  border-bottom: solid black 1px;
 }
-.snack-card-index aside{
-    margin-top: 5px;
-    background-color: #fff6a2;
+.snack-card-index aside {
+  margin-top: 5px;
+  background-color: #fff6a2;
 }
-.snack-index-name{
-    margin-bottom: 0;
+.snack-index-name {
+  margin-bottom: 0;
 }
 .symbols {
-    position: absolute;
-    bottom: 0;
-    margin:0;
-  }
-  .symbol {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-  }
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+.symbol {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}

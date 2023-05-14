@@ -32,23 +32,23 @@ export default function Snack(props) {
       className='snack-card-index'
     >
       <img
-      className='snack-card-index-img'
+        className='snack-card-index-img'
         src={theSnack.url}
         onClick={() => navigate(`/snacks/${theSnack.id}`)}
       />
       <aside>
         <p className='snack-index-name'> {theSnack.name} </p>
         <section className='symbols-index'>
-            {theSnack.is_glutenfree && (
-              <img src={gluten} alt='gluten free' className='symbol' />
-            )}
-            {theSnack.is_vegan && (
-              <img src={vegan} alt='vegan friendly' className='symbol' />
-            )}
-            {theSnack.is_vegetarian && (
-              <img src={veggie} alt='vegetarian friendly' className='symbol' />
-            )}
-          </section>
+          {theSnack.is_glutenfree && (
+            <img src={gluten} alt='gluten free' className='symbol' />
+          )}
+          {theSnack.is_vegan && (
+            <img src={vegan} alt='vegan friendly' className='symbol' />
+          )}
+          {theSnack.is_vegetarian && (
+            <img src={veggie} alt='vegetarian friendly' className='symbol' />
+          )}
+        </section>
       </aside>
     </div>
   );
