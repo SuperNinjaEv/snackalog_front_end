@@ -1,0 +1,61 @@
+.home-grid {
+  display: grid;
+  grid-template-columns: 20vw 8vw 62vw;
+}
+.newly-added-home {
+  height: 400px;
+  border: solid red 3px;
+  width: 100%;
+  background-color: #fff6a2;
+}
+.newly-added-home h2 {
+  margin-bottom: 0;
+  color:red;
+}
+.favorites-home {
+  overflow-y: scroll;
+  height: 60vh;
+  border: solid red 3px;
+  width: 350px;
+  background-color: #fff6a2;
+}
+.favorites-home h2 {
+  position: absolute;
+  z-index:2;
+  background-color: #fff6a2;
+  width: 342px;
+  color:red;
+  margin-bottom: 0;
+}
+.newly-added-snacks {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.snack-card {
+  margin-left: 20px;
+  margin-top: 70px;
+  display: block;
+  width: 300px;
+  height: 250px;
+  border: solid grey 1px;
+  background-color: white;
+}
+.snack-card img {
+  width: 200px;
+  height: 200px;
+}
+.all-snacks-btn {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  position: absolute;
+  bottom: 10px;
+  right: 5%;
+}

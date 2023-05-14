@@ -1,8 +1,8 @@
-import SnackDetails from "../Components/SnackDetails";
+import SnackDetails from '../Components/SnackDetails';
 
 function Show() {
   return (
-    <div className="Show">
+    <div className='Show'>
       <SnackDetails />
     </div>
   );

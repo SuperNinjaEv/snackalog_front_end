@@ -7,9 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main{
-  margin-top:250px;
-  width:80%;
-  margin-left:auto;
+main {
+  margin-top: 250px;
+  width: 90%;
+  margin-left: auto;
   margin-right: auto;
+}
+.snacks-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
