@@ -16,4 +16,12 @@
     color: white;
 }
 
+.cat-btn:hover {
+    background-color: red;
+}
+
+.cat-btn:focus {
+    background-color: red;
+}
+
 

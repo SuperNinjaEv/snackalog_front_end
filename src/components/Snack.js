@@ -23,7 +23,7 @@ const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
     return (
         <div className="snack-card" >
             <img style={{"height": 250, "width": 250}} src={theSnack.url} onClick={() => navigate(`/snacks/${theSnack.id}`)} />
-            <p onClick={() => navigate(`/snacks/${theSnack.id}`)} > {theSnack.name} </p>
+            <p onClick={() => navigate(`/snacks/${theSnack.id}`)} className="snack-name" > {theSnack.name} </p>
         </div>
 
     )
