@@ -31,21 +31,21 @@ export default function Snack(props) {
       className={props.view==='grid'?'snack-card-list':'snack-card-index'}
     >
       <img
-        className='snack-card-index-img'
+        className={props.view==='grid'?'snack-card-list-img':'snack-card-index-img'}
         src={theSnack.url}
         onClick={() => navigate(`/snacks/${theSnack.id}`)}
       />
       <aside>
-        <p className='snack-index-name'> {theSnack.name} </p>
+        {props.view==='grid' ?<h2> {theSnack.name}</h2> :<p className='snack-index-name'> {theSnack.name} </p>}
         <section className='symbols-index'>
           {theSnack.is_glutenfree && (
-            <img src={gluten} alt='gluten free' className='symbol' />
+            <img src={gluten} alt='gluten free' className={props.view==='grid'?'list-symbol':'symbol'} />
           )}
           {theSnack.is_vegan && (
-            <img src={vegan} alt='vegan friendly' className='symbol' />
+            <img src={vegan} alt='vegan friendly' className={props.view==='grid'?'list-symbol':'symbol'} />
           )}
           {theSnack.is_vegetarian && (
-            <img src={veggie} alt='vegetarian friendly' className='symbol' />
+            <img src={veggie} alt='vegetarian friendly' className={props.view==='grid'?'list-symbol':'symbol'} />
           )}
         </section>
       </aside>
