@@ -14,7 +14,7 @@ export default function Snack(props) {
         axios.get(`${REACT_APP_API_URL}/snacks/${props.snack.id}`)
             .then((response) => {
                 setTheSnack(response.data)
-                console.log(response.data);
+                // console.log(response.data);
             }).catch((e) => {
                 console.error("catch", e)
                 navigate("*" || "/not-found")
