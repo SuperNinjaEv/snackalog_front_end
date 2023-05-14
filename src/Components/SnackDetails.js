@@ -14,22 +14,35 @@ export default function SnackDetails() {
   const navigate = useNavigate();
   const [snack, setSnack] = useState({});
   const [modal, setModal] = useState(false)
+
   useEffect(() => {
-    axios.get(`${API}/snacks/${id}`).then(res => setSnack(res.data));
+    axios.get(`${API}/snacks/${id}`)
+      .then(res => {
+        if (res.data.name === 'QueryResultError') {
+          console.log(res.data)
+          navigate('*')
+        } else {
+          setSnack(res.data)
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        navigate('*');
+      });
   }, [id]);
 
-  const handleClose=()=>{
+  const handleClose = () => {
     setModal(false)
   }
   const handleDelete = () => {
     setModal(true)
   };
-  const confirmDelete=()=>{
+  const confirmDelete = () => {
     axios.delete(`${API}/snacks/${id}`).then(_ => navigate('/snacks'));
   }
   return (
     <div>
-      {modal&&<Modal handleDelete={confirmDelete} snack={snack} handleClose={handleClose}/>}
+      {modal && <Modal handleDelete={confirmDelete} snack={snack} handleClose={handleClose} />}
       <button className='go-back-btn' onClick={() => navigate(-1)}> ⬅ All Snacks </button>
       <header className='snack-details-header'>
         {snack.is_favorite && (

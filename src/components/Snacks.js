@@ -15,28 +15,28 @@ export default function Snacks(props) {
 
     return (
         <>
-        {
-               snacks.map((snack) => {
+            {
+                snacks.map((snack) => {
 
-                if (props.selectedCategory === "all-snacks") {
+                    if (props.selectedCategory === "all-snacks") {
 
-                    return (
-                        <div key={snack.id}>
-                        <Snack snack={snack} />
-                        </div> 
-                    )
-                }
+                        return (
+                            <div key={snack.id}>
+                                <Snack snack={snack} />
+                            </div>
+                        )
+                    }
 
-                else if (props.selectedCategory.toLowerCase() === snack.category.toLowerCase()) {
+                    else if (props.selectedCategory.toLowerCase() === snack.category.toLowerCase()) {
 
-                    return (
-                        <div key={snack.id}>
-                        <Snack snack={snack} />
-                        </div> 
-                    )
-                } 
-            })
-        }
+                        return (
+                            <div key={snack.id}>
+                                <Snack snack={snack} />
+                            </div>
+                        )
+                    }
+                })
+            }
         </>
     )
 }
