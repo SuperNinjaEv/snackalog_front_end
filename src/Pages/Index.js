@@ -1,6 +1,7 @@
 import Snacks from '../Components/Snacks';
 import Categories from '../Components/Categories';
 import { useState } from 'react';
+import './index.css';
 
 function Index() {
 
@@ -29,7 +30,7 @@ function Index() {
 
   return (
     <div className="Index">
-      <button onClick={handleViewMode} className='viewMode-btn'> {gridOrList} </button>
+      <button onClick={handleViewMode} className='viewMode-btn' style={{float: "left"}}> {gridOrList} </button>
       <h2>Snacks-A-Hoy!</h2>
       <Categories setSelectedCategory={setSelectedCategory} />
       <br />
