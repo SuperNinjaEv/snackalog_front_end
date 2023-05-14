@@ -4,6 +4,18 @@
 
 .categories {
     border: 1px solid lightgray;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    /* max-width: 50%; */
+    min-width: 200px;
+}
+
+.cat-row {
+    padding-bottom: 10px;
+    justify-content: flex-start;
 }
 
 .cat-btn {

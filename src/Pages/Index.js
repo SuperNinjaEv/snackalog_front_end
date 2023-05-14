@@ -12,8 +12,8 @@ function Index() {
 
   return (
     <div className="Index">
-      <Categories setSelectedCategory={setSelectedCategory} setView={setView} view={view} />
       <h2>Snacks-A-Hoy!</h2>
+      <Categories setSelectedCategory={setSelectedCategory} setView={setView} view={view} />
       <br />
       <Snacks selectedCategory={selectedCategory} REACT_APP_API_URL={REACT_APP_API_URL} />
     </div>
