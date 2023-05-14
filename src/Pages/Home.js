@@ -1,8 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import NewlyAdded from '../Components/NewlyAdded';
 import Favorites from '../Components/Favorites';
-import { useEffect } from 'react';
-import Categories from '../Components/Categories';
+
 import './home.css';
 export default function Home() {
   const navigate = useNavigate();
@@ -20,7 +19,7 @@ export default function Home() {
           <NewlyAdded />
         </div>
       </section>
-      <button onClick={() => navigate('/snacks')}>See All Snacks</button>
+      <button className='all-snacks-btn' onClick={() => navigate('/snacks')}>See All Snacks</button>
     </div>
   );
 }

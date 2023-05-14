@@ -13,3 +13,8 @@ main{
   margin-left:auto;
   margin-right: auto;
 }
+.snacks-index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
