@@ -58,6 +58,7 @@ export default function SnackEditForm() {
     updateSnack(snack, id);
   };
 
+
   return (
     <div className='New'>
       <form className='rounded p-4 p-sm-3' onSubmit={handleSubmit}>

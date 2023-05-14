@@ -5,6 +5,7 @@ export default function Categories(props) {
     props.setSelectedCategory(event.target.name);
   }
 
+
   return (
     <div className='categories'>
       {/* how to make a toggle button */}
@@ -62,6 +63,7 @@ export default function Categories(props) {
       </div>
     </div>
   );
+
 }
 
 //first we make the list view a state and we make it the default
