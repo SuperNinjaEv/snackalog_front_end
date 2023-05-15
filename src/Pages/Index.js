@@ -3,37 +3,36 @@ import Categories from '../Components/Categories';
 import { useState } from 'react';
 
 function Index() {
-
-   const [viewMode, setViewMode] = useState("inline-grid");
-
-  const [gridOrList, setGridorList] = useState("grid view")
+  const [viewMode, setViewMode] = useState('inline-grid');
+  const [selectedCategory, setSelectedCategory] = useState('all-snacks');
+  const [gridOrList, setGridorList] = useState('grid view');
 
   function handleViewMode() {
-
-    if (viewMode === "inline-grid") {
-
-      setViewMode("grid");
-      setGridorList("List");
+    if (viewMode === 'inline-grid') {
+      setViewMode('grid');
+      setGridorList('List');
+    } else if (viewMode === 'grid') {
+      setViewMode('inline-grid');
+      setGridorList('Grid');
     }
-
-    else if (viewMode === "grid") {
-
-      setViewMode("inline-grid");
-      setGridorList("Grid");
-    } 
   }
-
-  const [selectedCategory, setSelectedCategory] = useState('all-snacks');
 
   const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
   return (
-    <div className="Index">
-      <button onClick={handleViewMode} className='viewMode-btn'> {gridOrList} </button>
+    <div className='Index'>
+      <button onClick={handleViewMode} className='viewMode-btn'>
+        {' '}
+        {gridOrList}{' '}
+      </button>
       <h2>Snacks-A-Hoy!</h2>
       <Categories setSelectedCategory={setSelectedCategory} />
       <br />
-      <Snacks selectedCategory={selectedCategory} REACT_APP_API_URL={REACT_APP_API_URL} viewMode={viewMode} />
+      <Snacks
+        selectedCategory={selectedCategory}
+        REACT_APP_API_URL={REACT_APP_API_URL}
+        viewMode={viewMode}
+      />
     </div>
   );
 }

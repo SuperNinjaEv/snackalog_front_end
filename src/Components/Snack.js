@@ -17,35 +17,34 @@ export default function Snack(props) {
       .get(`${REACT_APP_API_URL}/snacks/${props.snack.id}`)
       .then(response => {
         setTheSnack(response.data);
-        console.log(response.data);
       })
       .catch(e => {
         console.error('catch', e);
         navigate('*' || '/not-found');
       });
-  }, []);
+  }, [navigate, props.snack.id, REACT_APP_API_URL]);
 
   return (
     <div
       onClick={() => navigate(`/snacks/${theSnack.id}`)}
-      className='snack-card-index'
+      className={props.view==='grid'?'snack-card-list':'snack-card-index'}
     >
       <img
-        className='snack-card-index-img'
-        src={theSnack.url}
+        className={props.view==='grid'?'snack-card-list-img':'snack-card-index-img'}
+        src={theSnack.url} alt={theSnack.name}
         onClick={() => navigate(`/snacks/${theSnack.id}`)}
       />
       <aside>
-        <p className='snack-index-name'> {theSnack.name} </p>
+        {props.view==='grid' ?<h2> {theSnack.name}</h2> :<p className='snack-index-name'> {theSnack.name} </p>}
         <section className='symbols-index'>
           {theSnack.is_glutenfree && (
-            <img src={gluten} alt='gluten free' className='symbol' />
+            <img src={gluten} alt='gluten free' className={props.view==='grid'?'list-symbol':'symbol'} />
           )}
           {theSnack.is_vegan && (
-            <img src={vegan} alt='vegan friendly' className='symbol' />
+            <img src={vegan} alt='vegan friendly' className={props.view==='grid'?'list-symbol':'symbol'} />
           )}
           {theSnack.is_vegetarian && (
-            <img src={veggie} alt='vegetarian friendly' className='symbol' />
+            <img src={veggie} alt='vegetarian friendly' className={props.view==='grid'?'list-symbol':'symbol'} />
           )}
         </section>
       </aside>
