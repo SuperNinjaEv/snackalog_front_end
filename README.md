@@ -4,6 +4,8 @@ Have a craving and unsure what to munch on, visit snack-a-log for all you past s
 
 Check our the packaged product [HERE!](https://snack-a-log-log.netlify.app/)
 
+[Snack-A-Log Log](https://snack-a-log-log.netlify.app/)
+
 ### Mapping our progress
 [Trello](https://trello.com/b/QnFdarGf/group-project-snackalog)
 
