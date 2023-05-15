@@ -1,6 +1,8 @@
 # Snack-A-Log 
 ## Log your snacks
-Have a craving and unsure what to munch on, visit snack-a-log for all you past snack ideas and creations.  
+Have a craving and unsure what to munch on, visit snack-a-log for all you past snack ideas and creations. 
+
+Check our the packaged product [HERE!](https://snack-a-log-log.netlify.app/)
 
 ### Mapping our progress
 [Trello](https://trello.com/b/QnFdarGf/group-project-snackalog)
