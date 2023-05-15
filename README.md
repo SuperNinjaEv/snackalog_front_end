@@ -1,6 +1,10 @@
 # Snack-A-Log 
+
+## Checkout the deployed page [here](https://main--glowing-pixie-f8a2fc.netlify.app/)
+
 ## Log your snacks
 Have a craving and unsure what to munch on, visit snack-a-log for all you past snack ideas and creations.  
+
 
 ### Mapping our progress
 [Trello](https://trello.com/b/QnFdarGf/group-project-snackalog)
