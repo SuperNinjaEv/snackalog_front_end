@@ -1,3 +1,23 @@
+.snack-card-list {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff6a2;
+  border: solid red 2px;
+  margin-bottom: 20px;
+}
+.snack-card-list-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+}
+.snack-card-list .symbols-index {
+  float: left;
+}
+.list-symbol {
+  width: 25px;
+  height: 25px;
+}
+
 .snack-card-index {
   width: 300px;
   height: 360px;
@@ -34,6 +54,3 @@
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.25em);
 }
-
-
-

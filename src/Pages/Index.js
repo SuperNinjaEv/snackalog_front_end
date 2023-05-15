@@ -48,7 +48,11 @@ function Index() {
       <h2>Snacks-A-Hoy!</h2>
       <Categories setSelectedCategory={setSelectedCategory} />
       <br />
-      <Snacks selectedCategory={selectedCategory} REACT_APP_API_URL={REACT_APP_API_URL} viewMode={viewMode} />
+      <Snacks
+        selectedCategory={selectedCategory}
+        REACT_APP_API_URL={REACT_APP_API_URL}
+        viewMode={viewMode}
+      />
     </div>
   );
 }

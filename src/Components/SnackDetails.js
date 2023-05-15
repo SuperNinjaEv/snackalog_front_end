@@ -30,7 +30,7 @@ export default function SnackDetails() {
         console.error(err);
         navigate('*');
       });
-  }, [id]);
+  }, [id, navigate]);
 
   const handleClose = () => {
     setModal(false);

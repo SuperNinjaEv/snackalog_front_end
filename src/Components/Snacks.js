@@ -11,26 +11,25 @@ export default function Snacks(props) {
       .get(`${props.REACT_APP_API_URL}/snacks`)
       .then(response => setSnacks(response.data))
       .catch(e => console.error('catch', e));
-  }, []);
+  }, [props.REACT_APP_API_URL]);
 
   return (
     <>
       {snacks.map(snack => {
-        if (props.selectedCategory === 'all-snacks') {
-          return (
-            <div key={snack.id} style={{display: props.viewMode}}>
-              <Snack snack={snack} />
-            </div>
-          );
-        } else if (
+        if (
           props.selectedCategory.toLowerCase() === snack.category.toLowerCase()
         ) {
           return (
-            <div key={snack.id} style={{display: props.viewMode}}>
-              <Snack snack={snack} />
+            <div key={snack.id} style={{ display: props.viewMode }}>
+              <Snack snack={snack} view={props.viewMode} />
             </div>
           );
         }
+        return (
+          <div key={snack.id} style={{display: props.viewMode}}>
+            <Snack snack={snack} view={props.viewMode}/>
+          </div>
+        );
       })}
     </>
   );
