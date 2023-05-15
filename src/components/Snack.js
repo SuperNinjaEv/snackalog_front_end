@@ -17,13 +17,12 @@ export default function Snack(props) {
       .get(`${REACT_APP_API_URL}/snacks/${props.snack.id}`)
       .then(response => {
         setTheSnack(response.data);
-        console.log(response.data);
       })
       .catch(e => {
         console.error('catch', e);
         navigate('*' || '/not-found');
       });
-  }, []);
+  }, [navigate, props.snack.id, REACT_APP_API_URL]);
 
   return (
     <div
@@ -32,7 +31,7 @@ export default function Snack(props) {
     >
       <img
         className={props.view==='grid'?'snack-card-list-img':'snack-card-index-img'}
-        src={theSnack.url}
+        src={theSnack.url} alt={theSnack.name}
         onClick={() => navigate(`/snacks/${theSnack.id}`)}
       />
       <aside>
