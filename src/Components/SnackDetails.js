@@ -14,7 +14,8 @@ export default function SnackDetails() {
   const navigate = useNavigate();
   const [snack, setSnack] = useState({});
   const [modal, setModal] = useState(false);
-  //const [snackNote, setSnackNote] = useState("");
+  const [snackNote, setSnackNote] = useState("");
+  const [snackNotes, setSnackNotes] = useState([]);
   useEffect(() => {
     axios.get(`${API}/snacks/${id}`)
       .then(res => {
@@ -41,12 +42,17 @@ export default function SnackDetails() {
     axios.delete(`${API}/snacks/${id}`).then(_ => navigate('/snacks'));
   };
 
-  // function handleNotes(event) {
-  //   event.preventDefault();
+  const handleNotes = (event) => {
+    //event.preventDefault();
 
-  //   setSnackNote(event.target.note);
-    
-  // }
+    setSnackNote(event.target.value)
+    //console.log(snackNote) sucess
+  }
+
+  const addNoteHandler = () => {
+
+    setSnackNotes((snackNotes) => [...snackNotes, snackNote]);
+  }
 
   return (
     <div>
@@ -91,13 +97,19 @@ export default function SnackDetails() {
             )}
           </aside>
         </aside>
-        {/* <section className='snack-notes'>
-        <form>
-            <label> Snack Notes </label>
-            <input type='text' onKeyUp={event => handleNotes(event)} name='note'/>
-            <button type='submit'> Add Note </button>
-        </form>
-        </section> */}
+        <section className='snack-notes'>
+          <p> Snack Notes </p>
+          <textarea value={snackNote} onChange={handleNotes} style={{borderColor: "paleturquoise"}} />
+          <br />
+          <button onClick={addNoteHandler} style={{backgroundColor: "orangered", border: "none", color: "white"}}> Add Note </button>
+          <br />
+          {snackNotes.map((note) => (
+            <>
+            <br />
+            {note}
+            </>
+          ))}
+        </section>
       </section>
       <section className='buttons'>
         <button className='delete-btn' onClick={handleDelete}>

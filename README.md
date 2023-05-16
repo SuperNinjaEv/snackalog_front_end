@@ -1,6 +1,10 @@
 # Snack-A-Log 
 ## Log your snacks
-Have a craving and unsure what to munch on, visit snack-a-log for all you past snack ideas and creations.  
+Have a craving and unsure what to munch on, visit snack-a-log for all you past snack ideas and creations. 
+
+Check our the packaged product [HERE!](https://snack-a-log-log.netlify.app/)
+
+[Snack-A-Log Log](https://snack-a-log-log.netlify.app/)
 
 ### Mapping our progress
 [Trello](https://trello.com/b/QnFdarGf/group-project-snackalog)
@@ -19,7 +23,14 @@ In the terminal, navigate to that folder and run the following command `npm inst
 
 You can then run `npm start`, snack-a-log should then be running on your localhost.
 
-you should land on the home page 
+you should land on the home page.
+
+### Check out the final Deploys
+We have deployed our Back-end using Render.com.
+You may preview that [HERE.](https://snack-a-alog-back-end.onrender.com/)
+
+We have deployed our Front-end using Netlify.
+YOu may preview that [HERE.](https://snack-a-log-log.netlify.app/)
 
 <img width="940" alt="Screenshot 2023-05-14 at 1 56 13 PM" src="https://github.com/SuperNinjaEv/snackalog_front_end/assets/37090868/a65a6f5e-6de6-4429-925f-169b622b4c0e">
 
