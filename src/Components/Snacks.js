@@ -24,12 +24,13 @@ export default function Snacks(props) {
               <Snack snack={snack} view={props.viewMode} />
             </div>
           );
+        } else if(props.selectedCategory === 'all-snacks'){ 
+          return (
+            <div key={snack.id} style={{ display: props.viewMode }}>
+              <Snack snack={snack} view={props.viewMode} />
+            </div>
+          );
         }
-        return (
-          <div key={snack.id} style={{display: props.viewMode}}>
-            <Snack snack={snack} view={props.viewMode}/>
-          </div>
-        );
       })}
     </>
   );
